@@ -284,7 +284,7 @@ public final class V2rayCoreManager {
         Intent launchIntent = v2rayServicesListener.getService().getPackageManager().
                 getLaunchIntentForPackage(v2rayServicesListener.getService().getApplicationInfo().packageName);
         launchIntent.setAction("FROM_DISCONNECT_BTN");
-        launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        // launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent notificationContentPendingIntent = PendingIntent.getActivity(
                 v2rayServicesListener.getService(), 0, launchIntent, judgeForNotificationFlag());
         String notificationChannelID = "";
